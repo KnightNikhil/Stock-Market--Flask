@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<style>
+body {
+  background-image: url("static/testbg.jpg");
+    text-align:center;
+}
+
+.signup {
+  background-color: #f1f1f1;
+  height:50%;
+  width :25%;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  text-align:center;
+  border-radius: 10px;
+    margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  
+}
+
+input[type=text], input[type=password] {
+  width: 40%;
+  padding: 15px;
+  margin-left : 10%;
+  margin-bottom:1%;
+  margin-right:10%;
+  margin-top:5%;
+  display: inline-block;
+  border: 1px solid black;;
+  background: #f1f1f1;
+  border-radius: 10px;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+logoimg {
+ display: block;
+margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.container {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  }
+
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.loginbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  margin-bottom:35px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+  border-radius: 10px;
+  font-size:15px;
+}
+
+</style>
+
+
+
+
+<br>
+<logoimg><img src="static/logo.png" alt="Bull" img align="middle" width="500" height="300"></logoimg>
+<h1 style="font-size:250%;"><b>Stock Options Pro</b></h1>
+
+<!-- change the action here -->
+<form action="" method="POST">
+<div class="container">
+    <br>
+    <label for="email_reg" style="font-size:20px;" style="text-align:right;"  style="float:left"><b>Email &emsp; &ensp; </b></label>
+    <input type="text" placeholder="Enter Email" name="email_reg" id="email_reg"" required>
+    <br>
+    <label for="psw_reg"  style="font-size:20px;" style="text-align:right;"  style="float:left"><b>Password </b></label>
+    <input type="password" placeholder="Enter Password" name="psw_reg" id="psw_reg"  required>
+    <br>
+    
+    <br>
+    <input type="checkbox" id ="remember_me" >
+    <label for="remember_me" style="font-size:15px;">Remember Me</label>
+    <br>
+    
+    <hr>
+
+        <button type="submit" class="loginbtn" style="text-align:center;">Login</button>
+    
+           
+
+
+</form>
+<p class="signup"> New User?  <a  href="{{url_for('register')}}" target="_blank">Register here</a>.</p>
+
+</div>
+
+</body>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<h1 align='center'><b>Gut</h1></b>
+
+
+
+<br>
+<br><br><br><br>
+
+<style>
+label0 {
+  position: absolute;
+  left: 660px;
+  top: 145px;
+  font-size: 30px;
+}
+option1 {
+  position: absolute;
+  left: 775px;
+  top: 145px;
+  font-size: 30px;
+}
+label1 {
+  position: absolute;
+  left: 315px;
+  top: 250px;
+  font-size: 30px;
+}
+input1 {
+  position: absolute;
+  left: 490px;
+  top: 250px;
+  border-style: solid;
+  font-size: 20px;
+}
+label2 {
+  position: absolute;
+  left: 850px;
+  top: 250px;
+  font-size: 30px;
+}
+input2 {
+  position: absolute;
+  left: 1015px;
+  top: 250px;
+  border-style: solid;
+  font-size: 20px;
+}
+
+submit {
+  position: absolute;
+  left: 700px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+dropdownbutton {
+  position: absolute;
+  left: 720px;
+  top: 0px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+reset {
+  position: absolute;
+  left: 800px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+}
+        
+</style> 
+
+<form action="{{url_for('gut')}}" method="POST">
+  
+  <label0><label for="action">Action:</label></label0>
+  <option1><select name="action" id="action">
+    <option  value="11">Short</option>
+    <option  value="12">Long</option>
+    
+  </select></option1>
+  
+  
+  <label1><label >Call Strike:</label><br></label1>
+  <input1><input type="text" name="strike1" ></input1><br>
+  <label2><label >Put Strike:</label><br></label2>
+  <input2><input type="text" name="strike2" ></input2><br><br>
+  
+  <submit><input type="submit" value="submit"></submit>
+  <reset><input type="reset"></reset>
+</form> 
+
+	<p style = "font-size : 35px" class='center'> Result is : {{submit}}</p>
+	<img src={{filename}} class='center' alt ="" >	
+
+{% endblock %}

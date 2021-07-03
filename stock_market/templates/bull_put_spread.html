@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<h1 align='center'><b>Bull Put Spread</h1></b>
+<br>
+<br><br><br><br>
+
+<style>
+
+label1 {
+  position: absolute;
+  left: 250px;
+  top: 220px;
+  font-size: 30px;
+}
+input1 {
+  position: absolute;
+  left: 515px;
+  top: 220px;
+  border-style: solid;
+  font-size: 20px;
+}
+label2 {
+  position: absolute;
+  left: 820px;
+  top: 220px;
+  font-size: 30px;
+}
+input2 {
+  position: absolute;
+  left: 1085px;
+  top: 220px;
+  border-style: solid;
+  font-size: 20px;
+}
+submit {
+  position: absolute;
+  left: 685px;
+  top: 300px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+reset {
+  position: absolute;
+  left: 785px;
+  top: 300px;
+  border-style: solid;
+  font-size: 20px;
+}
+        
+</style> 
+
+<form action="{{url_for('bull_put_spread')}}" method="POST">
+  <label1><label >Lower Strike Put:</label><br></label1>
+  <input1><input type="text" name="strike1"></input1><br>
+  <label2><label >Higher Strike Put:</label><br></label2>
+  <input2><input type="text" name="strike2" ></input2><br><br>
+  <submit><input type="submit" value="submit"></submit>
+  <reset><input type="reset"></reset>
+</form> 
+	<p style = "font-size : 35px" class='center'> Result is : {{submit}}</p>
+	<img src={{filename}} class='center' alt ="" >	
+
+{% endblock %}

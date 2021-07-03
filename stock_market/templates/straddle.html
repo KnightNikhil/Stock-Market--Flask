@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<br>
+<br><br><br><br>
+
+<style>
+label0 {
+  position: absolute;
+  left: 660px;
+  top: 145px;
+  font-size: 30px;
+}
+option1 {
+  position: absolute;
+  left: 775px;
+  top: 145px;
+  font-size: 30px;
+}
+label1 {
+  position: absolute;
+  left: 530px;
+  top: 250px;
+  font-size: 30px;
+}
+input1 {
+  position: absolute;
+  left: 715px;
+  top: 250px;
+  border-style: solid;
+  font-size: 20px;
+}
+
+submit {
+  position: absolute;
+  left: 700px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+dropdownbutton {
+  position: absolute;
+  left: 720px;
+  top: 0px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+reset {
+  position: absolute;
+  left: 800px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+}
+        
+</style> 
+
+<h1 align='center'><b>Straddle</h1></b>
+<form action="{{url_for('straddle')}}" method="POST">
+
+  <label0><label for="action">Action:</label></label0>
+  <option1><select name="action" id="action" >
+    <option value="12">Long</option>
+    <option value="11">Short</option>
+  </select></option1>
+  
+
+  <label1><label >Strike Price 1:</label></label1><br>
+  <input1><input type="text" name="strike1"></input1><br>
+
+  <submit><input type="submit" value="submit"></submit>
+  <reset><input type="reset"></reset>
+</form> 
+
+	<p style = "font-size : 35px" class='center'> Result is : {{submit}}</p>
+	<img src={{filename}} class='center' alt ="" >	
+
+    
+
+
+{% endblock %}

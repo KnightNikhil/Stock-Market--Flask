@@ -1,0 +1,54 @@
+
+<html> 
+    <body>
+   
+       	<form action="/" method="POST" >
+       	 <p>
+       	<label for="strategy">Choose a strategy</label>
+       	
+   
+    <select name="strategy" id="strategy">
+      <option value="1">Iron Condor</option>
+      <option value="2">Straddle</option>
+      <option value="3">Strangle</option>
+      <option value="4">Bull Call Spread</option>
+      <option value="5">Bear Call Spread</option>
+      <option value="6">Bull Put Spread</option>
+      <option value="7">Bear Put Spread</option>
+      <option value="8">Gut</option>
+      <option value="9">Iron Butterfly</option>
+      <option value="10">Covered Call</option>
+      <option value="11">Protective Call</option>
+      <option value="12">Covered Put</option>
+      <option value="13">Protective Put</option>
+      
+    </select>
+    </p>
+    <p>
+    <label for="action">Choose a Action</label>
+    
+    <select name="action" id="action">
+      <option value="11">Short</option>
+      <option value="12">Long</option>
+    </select>
+    </p>
+      
+	Strike1
+	<input type="text" name="strike1"><br>
+	Strike2
+	<input type="text" name="strike2"><br>
+	Strike3
+	<input type="text" name="strike3"><br>
+	Strike4
+	<input type="text" name="strike4"><br>
+	<button type="submit" value="submit" >Result</button> 
+	</form>
+	
+	
+	<p> Result is : {{submit}}</p>
+	<img src={{filename}}>
+	
+    
+    
+    </body>
+</html>

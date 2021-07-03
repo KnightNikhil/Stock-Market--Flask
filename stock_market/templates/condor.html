@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<h1 align='center'><b>Condor</h1></b>
+<form action="/action_page.php">
+  <labelA><label for="Actions">Action:</label></labelA>
+  <optionA><select name="actions" id="act">
+    <option value="long">Long</option>
+    <option value="short">Short</option>
+  </select></optionA>
+
+<labelT><label for="Type">Type:</label></labelT>
+  <optionT><select name="Type" id="type">
+    <option value="call">Call</option>
+    <option value="put">Put</option>
+  </select></optionT>
+  
+</form>
+
+<br>
+<br><br><br><br>
+
+<style>
+labelA {
+  position: absolute;
+  left: 490px;
+  top: 145px;
+  font-size: 30px;
+}
+optionA {
+  position: absolute;
+  left: 605px;
+  top: 145px;
+  font-size: 30px;
+}
+labelT {
+  position: absolute;
+  left: 850px;
+  top: 145px;
+  font-size: 30px;
+}
+optionT {
+  position: absolute;
+  left: 940px;
+  top: 145px;
+  font-size: 30px;
+}
+label1 {
+  position: absolute;
+  left: 275px;
+  top: 220px;
+  font-size: 30px;
+}
+input1 {
+  position: absolute;
+  left: 490px;
+  top: 220px;
+  border-style: solid;
+  font-size: 20px;
+}
+label2 {
+  position: absolute;
+  left: 850px;
+  top: 220px;
+  font-size: 30px;
+}
+input2 {
+  position: absolute;
+  left: 1065px;
+  top: 220px;
+  border-style: solid;
+  font-size: 20px;
+}
+label3 {
+  position: absolute;
+  left: 275px;
+  top: 300px;
+  font-size: 30px;
+}
+input3 {
+  position: absolute;
+  left: 490px;
+  top: 300px;
+  border-style: solid;
+  font-size: 20px;
+}
+label4 {
+  position: absolute;
+  left: 850px;
+  top: 300px;
+  font-size: 30px;
+}
+input4 {
+  position: absolute;
+  left: 1065px;
+  top: 300px;
+  border-style: solid;
+  font-size: 20px;
+}
+submit {
+  position: absolute;
+  left: 700px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px; 
+}
+reset {
+  position: absolute;
+  left: 800px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+}
+        
+</style> 
+
+<form action="{{url_for('result')}}" method="POST">
+  <label1><label for="strike_price_1">Strike Price 1:</label><br></label1>
+  <input1><input type="text" name="sp1_condor" ></input1><br>
+  <label2><label for="strike_price_2">Strike Price 2:</label><br></label2>
+  <input2><input type="text" name="sp2_condor" ></input2><br><br>
+  <label3><label for="strike_price_3">Strike Price 3:</label><br></label3>
+  <input3><input type="text" name="sp3_condor" ></input3><br>
+  <label4><label for="strike_price_4">Strike Price 4:</label><br></label4>
+  <input4><input type="text" name="sp4_condor" ></input4><br>
+  <submit><input type="submit" value="Submit"></submit>
+  <reset><input type="reset"></reset>
+</form> 
+
+
+{% endblock %}
+

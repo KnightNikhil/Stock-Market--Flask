@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<style>
+
+.wrapper {
+    text-align:center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image : url("static/testbg.jpg");
+    }
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0px 22px 0;
+  display: inline-block;
+  border: 1px solid black;;
+  background: #f1f1f1;
+  border-radius: 10px;
+
+  
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+label{
+    font-size:20px;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  margin-bottom:35px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+  border-radius: 10px;
+  font-size:15px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+ 
+}
+
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  height:50%;
+  width :25%;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  text-align:center;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 4px;
+  padding: 5px;
+  width: 45%;
+  height:400px;
+  float:right;
+}
+
+
+<body>
+
+<form action="" method= "POST">
+{{form.hidden_tag()}}
+  <div class="container">
+    <h1 style="text-align:center">Join now!!</h1>
+    <p>.</p>
+    <hr>
+    
+    <img src="static/logo.png">
+
+    <label for="uname_reg" ><b>Username</b></label>
+    <br><input type="text" placeholder="Enter Username" name="uname_reg" id="uname_reg" required>
+    <br>
+    <label for="email_reg"><b>Email</b></label>
+    <br><input type="text" placeholder="Enter Email" name="email_reg" id="email_reg" required>
+    <br>
+    <label for="psw_reg"><b>Password</b></label>
+    <br><input type="password" placeholder="Enter Password" name="psw_reg" id="psw_reg" required>
+    <br>
+    <label for="psw-repeat_reg"><b>Confirm Password</b></label>
+    <br><input type="password" placeholder="Repeat Password" name="psw-repeat_reg" id="psw-repeat_reg" required>
+    <br>
+    
+    <input type="checkbox" id ="remember_me" >
+    <label for="remember_me" style="font-size:18px;">Remember Me</label>
+    <br>
+    <hr>
+
+
+
+    
+    
+    <button type="submit" class="registerbtn">Register</button>
+
+  
+  <div class=" signin">
+    <p>Already have an account? <a href="{{url_for('login')}}">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+label0 {
+  position: absolute;
+  left: 660px;
+  top: 145px;
+  font-size: 30px;
+}
+option1 {
+  position: absolute;
+  left: 775px;
+  top: 145px;
+  font-size: 30px;
+}
+label1 {
+  position: absolute;
+  left: 275px;
+  top: 220px;
+  font-size: 30px;
+}
+input1 {
+  position: absolute;
+  left: 490px;
+  top: 220px;
+  border-style: solid;
+  font-size: 20px;
+}
+label2 {
+  position: absolute;
+  left: 850px;
+  top: 220px;
+  font-size: 30px;
+}
+input2 {
+  position: absolute;
+  left: 1065px;
+  top: 220px;
+  border-style: solid;
+  font-size: 20px;
+}
+label3 {
+  position: absolute;
+  left: 275px;
+  top: 300px;
+  font-size: 30px;
+}
+input3 {
+  position: absolute;
+  left: 490px;
+  top: 300px;
+  border-style: solid;
+  font-size: 20px;
+}
+label4 {
+  position: absolute;
+  left: 850px;
+  top: 300px;
+  font-size: 30px;
+}
+input4 {
+  position: absolute;
+  left: 1065px;
+  top: 300px;
+  border-style: solid;
+  font-size: 20px;
+}
+submit {
+  position: absolute;
+  left: 700px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+dropdownbutton {
+  position: absolute;
+  left: 720px;
+  top: 0px;
+  border-style: solid;
+  font-size: 20px;
+  
+}
+reset {
+  position: absolute;
+  left: 800px;
+  top: 370px;
+  border-style: solid;
+  font-size: 20px;
+}
+        
+</style> 
+<br>
+<h1 align='center'><b>Iron Condor</h1></b>
+
+<br>
+<br><br><br><br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form action="{{url_for('iron_condor')}}" method="POST">
+  
+  <label0><label for="action">Action:</label></label0>
+  <option1><select name="action" id="action">
+    <option  value="11">Short</option>
+    <option  value="12">Long</option>
+    
+  </select></option1>
+  
+  <label1><label >Strike Price 1:</label><br></label1>
+  <input1><input type="text" name="strike1" ></input1><br>
+  <label2><label >Strike Price 2:</label><br></label2>
+  <input2><input type="text" name="strike2" ></input2><br><br>
+  <label3><label >Strike Price 3:</label><br></label3>
+  <input3><input type="text" name="strike3" ></input3><br>
+  <label4><label >Strike Price 4:</label><br></label4>
+  <input4><input type="text" name="strike4" ></input4><br>
+ <submit><input type="submit" value="Submit" ></submit> 
+  <reset><input type="reset"></reset>
+
+</form> 
+
+	<p style = "font-size : 35px" class='center'> Result is : {{submit}}</p>
+
+	<img src={{filename}} class='center' alt ="" >	
+	
+{% endblock content %}
+
+
